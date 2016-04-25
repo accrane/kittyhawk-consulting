@@ -1,0 +1,128 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+$tabwidth: 600px;
+$midwidth: 900px;
+$deskwidth: 1080px;
+
+
+div {
+	/* These are technically the same, but use both */
+	
+
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+.wrapper {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $midwidth) {
+		padding: 0 5% ;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 90%;
+		padding: 0px;
+		margin: 0px auto;
+	}
+}
+#masthead {
+	width: 100%;
+	margin: 0;
+}
+.content-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 66%;
+		float: right;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+.widget-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 26%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+/* Logo */
+.logo , h1.logo {
+	width: 300px;
+	height: 200px;
+	background-image: url(images/logo.png);	
+	margin: 10px auto;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 300px;
+		height: 200px;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.logo a, h1.logo a {
+	width: 300px;
+	height: 200px;
+	display: block;
+	text-indent: -9000px;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 300px;
+		height: 200px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.site-header {
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+
+	img {width: 100%;}
+}
+.site-footer {
+	clear: both;
+	background-color: #ccc;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	padding: 10px 0;
+	text-align: right;
+	line-height: 2;
+	font: {
+		size: 12px;
+
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+		@include transition(all ease .3s);
+		display: inline-block;
+		width: auto;
+		&:hover {
+			background-color: rgba(255,255,255,.5);
+		}
+	}
+}
